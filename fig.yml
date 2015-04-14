@@ -1,0 +1,35 @@
+redis1:
+    image: io/redis:1.0
+    hostname: redis1
+    ports:
+        - "6370:6379"
+
+redis2:
+    image: io/redis:1.0
+    hostname: redis2
+    ports:
+        - "6380:6379"
+
+redis3:
+    image: io/redis:1.0
+    hostname: redis3
+    ports:
+        - "6390:6379"
+
+redis4:
+    image: io/redis:1.0
+    hostname: redis4
+    ports:
+        - "6371:6379"
+
+redis5:
+    image: io/redis:1.0
+    hostname: redis5
+    ports:
+        - "6381:6379"
+
+redis6:
+    image: io/redis:1.0
+    hostname: redis6
+    ports:
+        - "6391:6379"

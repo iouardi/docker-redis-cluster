@@ -1,0 +1,26 @@
+#!/bin/bash
+
+supervisord
+sleep 3
+echo "yes" | redis-trib.rb create --replicas 1 192.168.59.103:6370 192.168.59.103:6380 192.168.59.103:6390 192.168.59.103:6371 192.168.59.103:6381 192.168.59.103:6391
+tail -f /var/log/supervisor/redis.log
+
+
+
+
+
+# # Fail fast, including pipelines
+# set -eo pipefail
+
+# SCRIPT_ROOT=$(readlink -f "$(dirname "$0")"/..)
+# source "${SCRIPT_ROOT}/config.sh"
+
+# function main() {
+#     redis_sanitize_config
+#     #
+#     # Fire up Redis!
+#     #
+#     redis_start
+# }
+
+# main "$@"
